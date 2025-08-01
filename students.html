@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Enrolled Students</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/add">Add Student</a>
+        <a href="/students">View Students</a>
+    </nav>
+    <div class="container">
+        {% if students %}
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Course</th>
+                </tr>
+                {% for id, name, email, course in students %}
+                <tr>
+                    <td>{{ id }}</td>
+                    <td>{{ name }}</td>
+                    <td>{{ email }}</td>
+                    <td>{{ course }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>No students yet.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
