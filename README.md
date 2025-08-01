@@ -19,4 +19,21 @@ This is a Flask-based web application that simulates a basic college management 
 
 ## 📂 Project Structure
 
+project/
+├── app.py
+├── static/
+│ └── style.css
+│ └── college.png
+├── templates/
+│ └── index.html
+├── requirements.txt
+
+markdown
+Copy
+Edit
+
+
+
+
+
 
